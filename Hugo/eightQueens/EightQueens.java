@@ -3,18 +3,16 @@ package eightQueens;
 public class EightQueens {
 	  public static String eightQueens(String[] strArr) {
 		  //System.out.println(strArr[1]);
-		  //First convert the string array into an actual two dimensional array of integers
+		  //First convert the string array into a two dimensional array of integers
 		  int [][] intArray = new int [8][2];
 		  for (int i = 0;i < 8;i++) {
 			  //Create entries in the new array
 			  //X-coordinate
 			  char coordinateToAdd = strArr[i].charAt(1);
-			  //System.out.println(coordinateToAdd);
 			  intArray [i][0] = Character.getNumericValue(coordinateToAdd);
 			  //Y-coordinate
 			  coordinateToAdd = strArr[i].charAt(3);
 			  intArray [i][1] = Character.getNumericValue(coordinateToAdd);
-			  //System.out.println(intArray [i][0] + "," + intArray [i][1]);
 		  }
 		  //With the array constructed, test any of the separate entries (except itself) for:
 		  	//Match in one of the two values (i.e. {4,5} and {4,8} or {1,3} and {6,3})
@@ -39,15 +37,6 @@ public class EightQueens {
 
 		  }
 		  return "true";
-
-
-	    // code goes here
-	    /* Note: In Java the return type of a function and the
-	       parameter types being passed are defined, so this return
-	       call must match the return type of the function.
-	       You are free to modify the return type. */
-	    //return strArr[0];
-
 	  }
 
 /**
