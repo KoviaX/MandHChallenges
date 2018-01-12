@@ -1,5 +1,5 @@
 package eightQueens;
-//import java.util.*;
+
 public class EightQueens {
 	  public static String eightQueens(String[] strArr) {
 		  //System.out.println(strArr[1]);
