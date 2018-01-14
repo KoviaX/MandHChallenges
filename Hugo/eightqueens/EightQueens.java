@@ -1,8 +1,7 @@
-package eightQueens;
+package eightqueens;
 
 public class EightQueens {
 	  public static String eightQueens(String[] strArr) {
-		  //System.out.println(strArr[1]);
 		  //First convert the string array into a two dimensional array of integers
 		  int [][] intArray = new int [8][2];
 		  for (int i = 0;i < 8;i++) {
@@ -21,12 +20,12 @@ public class EightQueens {
 			  //Determine which coordinate to test
 			  int xCoordToTest = intArray[i][0];
 			  int yCoordToTest = intArray[i][1];
-			  TESTING_LOOP:for (int j = 0;j < 8;j++) {
+			  for (int j = 0;j < 8;j++) {
 				  //Test coordinate against other coordinates for collisions
 				  int xCollisionCoord = intArray[j][0];
 				  int yCollisionCoord = intArray[j][1];
 				  if (xCoordToTest == xCollisionCoord && yCoordToTest == yCollisionCoord) {
-					  continue TESTING_LOOP;
+					  continue ;
 				  }
 				  int xSubtractResult = Math.abs(xCoordToTest - xCollisionCoord);
 				  int ySubtractResult = Math.abs(yCoordToTest - yCollisionCoord);
