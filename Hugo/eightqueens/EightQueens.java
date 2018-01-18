@@ -20,13 +20,10 @@ public class EightQueens {
 			  //Determine which coordinate to test
 			  int xCoordToTest = intArray[i][0];
 			  int yCoordToTest = intArray[i][1];
-			  for (int j = 0;j < 8;j++) {
+			  for (int j = i+1;j < 8;j++) {
 				  //Test coordinate against other coordinates for collisions
 				  int xCollisionCoord = intArray[j][0];
 				  int yCollisionCoord = intArray[j][1];
-				  if (xCoordToTest == xCollisionCoord && yCoordToTest == yCollisionCoord) {
-					  continue ;
-				  }
 				  int xSubtractResult = Math.abs(xCoordToTest - xCollisionCoord);
 				  int ySubtractResult = Math.abs(yCoordToTest - yCollisionCoord);
 				  if (xCoordToTest == xCollisionCoord || yCoordToTest == yCollisionCoord || xSubtractResult == ySubtractResult) {
